@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,6 +31,22 @@ namespace PeerToPeerServer
         {
             StreamReader sr = new StreamReader(socket.GetStream());
             StreamWriter sw = new StreamWriter(socket.GetStream());
+
+            var str = sr.ReadLine();
+            string str2;
+
+            if (str == "GetAll")
+            {
+                sw.WriteLine($"Filer tilgængelige;");
+                Console.WriteLine($"Filer i listen: ");
+
+                foreach (var FilEndPoint in _data) sw.WriteLine(JsonConverter.SerializeObjekt(_data));
+                foreach (var VARIABLE in COLLECTION)
+                {
+                    Console.WriteLine(_data);
+                }
+
+            }
 
             sw.Flush();
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ModelLib.Model;
@@ -14,17 +15,18 @@ namespace SimplePeerToPeer.Controllers
     [ApiController]
     public class PeerController : ControllerBase
     {
-        private static Dictionary<string, FileEndPoint> _data = new Dictionary<string, FileEndPoint>
+        private static Dictionary<string, List<FileEndPoint>> _data = new Dictionary<string, List<FileEndPoint>>
         {
 
 
         };
+
         // GET: api/<PeerController>
         [HttpGet]
         [Route("api/powernap/{filename}")]
-        public IEnumerable<FileEndPoint> GetAll()
+        public List<FileEndPoint> GetAll(string filename)
         {
-            return _data(js);
+            return _data[filename];
         }
 
         // GET api/<PeerController>/5

@@ -8,6 +8,7 @@ namespace ModelLib.Model
     {
         private string _ipAddress;
         private int _portNumber;
+
         public string IpAddress
         {
             get => _ipAddress;
@@ -24,6 +25,7 @@ namespace ModelLib.Model
         {
 
         }
+
         public FileEndPoint(string ipAddress, int portNumber)
         {
             _ipAddress = ipAddress;
