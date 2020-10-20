@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePeerToPeer", "SimplePeerToPeer\SimplePeerToPeer.csproj", "{72ACE8E4-E332-4A49-A431-A0DC0EA6F882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplePeerToPeer", "SimplePeerToPeer\SimplePeerToPeer.csproj", "{72ACE8E4-E332-4A49-A431-A0DC0EA6F882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeerToPeerServer", "PeerToPeerServer\PeerToPeerServer.csproj", "{40653A4E-5B12-4067-86C7-1DF3DAE440D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeerToPeerServer", "PeerToPeerServer\PeerToPeerServer.csproj", "{40653A4E-5B12-4067-86C7-1DF3DAE440D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLib", "ModelLib\ModelLib.csproj", "{47495342-E4D5-4C93-B31C-E53C334682A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{40653A4E-5B12-4067-86C7-1DF3DAE440D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40653A4E-5B12-4067-86C7-1DF3DAE440D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40653A4E-5B12-4067-86C7-1DF3DAE440D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47495342-E4D5-4C93-B31C-E53C334682A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47495342-E4D5-4C93-B31C-E53C334682A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47495342-E4D5-4C93-B31C-E53C334682A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47495342-E4D5-4C93-B31C-E53C334682A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
