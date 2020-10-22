@@ -11,47 +11,53 @@ using ModelLib.Model;
 
 namespace SimplePeerToPeer.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/powernap/")]
     [ApiController]
     public class PeerController : ControllerBase
     {
         private static Dictionary<string, List<FileEndPoint>> _data = new Dictionary<string, List<FileEndPoint>>
         {
 
-
         };
+
+        private static void InsertIntoDictionary(Dictionary<string, List<FileEndPoint>> _data, string filename,
+            FileEndPoint fep)
+        {
+            if (_data.ContainsKey(filename))
+            {
+                List<FileEndPoint> listOfFep = _data[filename];
+                listOfFep.Add(fep);
+            }
+            else
+            {
+                List<FileEndPoint> listOfFep = new List<FileEndPoint>();
+                listOfFep.Add(fep);
+                _data.Add(filename,listOfFep);
+            }
+        }
 
         // GET: api/<PeerController>
         [HttpGet]
-        [Route("api/powernap/{filename}")]
+        [Route("{filename}")]
         public List<FileEndPoint> GetAll(string filename)
         {
             return _data[filename];
         }
 
-        // GET api/<PeerController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<PeerController>
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //public void Register([FromBody] string filename)
+        //{
+        //    _data.Add(filename);
+        //}
 
         // PUT api/<PeerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Deregister(int id, [FromBody] string filename)
         {
-        }
 
-        // DELETE api/<PeerController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+
+
         }
     }
 }

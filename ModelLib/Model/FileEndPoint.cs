@@ -9,6 +9,17 @@ namespace ModelLib.Model
         private string _ipAddress;
         private int _portNumber;
 
+        public FileEndPoint()
+        {
+
+        }
+
+        public FileEndPoint(string ipAddress, int portNumber)
+        {
+            _ipAddress = ipAddress;
+            _portNumber = portNumber;
+        }
+
         public string IpAddress
         {
             get => _ipAddress;
@@ -19,17 +30,6 @@ namespace ModelLib.Model
         {
             get => _portNumber;
             set => _portNumber = value;
-        }
-
-        public FileEndPoint()
-        {
-
-        }
-
-        public FileEndPoint(string ipAddress, int portNumber)
-        {
-            _ipAddress = ipAddress;
-            _portNumber = portNumber;
         }
 
         public override string ToString()
